@@ -23,5 +23,5 @@ function removeItem(btnItem){
 
 function entryComplete(entryName){
 alert("Good Job!")
-	entryName.parentElement.appendTo("#completed");
+	$(entryName.parentElement).appendTo(".completed");
 }
