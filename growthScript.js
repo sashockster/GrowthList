@@ -18,12 +18,14 @@ function removeItem(btnItem){
     var r = confirm("Are you sure you would like to delete this?");
 	
     if (r == true) {
+		$(btnItem.parentElement).remove();
 }
 }
 
 function entryComplete(entryName){
 alert("Good Job!")
+//Move the div to Completed
 	$(entryName.parentElement).appendTo(".completed");
 	$(entryName.parentElement).removeClass('entry').addClass('completed-entry');
-
+	$(entryName.parentElement.children).remove();
 }
